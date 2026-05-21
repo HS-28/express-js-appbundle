@@ -35,8 +35,7 @@ jobs:
 
       - uses: jfrog/frogbot@v2.28.0
         with:
-          oidc-provider-name: mikeho-github
-          oidc-audience: mikeho-audience
+          oidc-provider-name: hs-gh
           version: latest
         env:
           # [Mandatory]
@@ -90,11 +89,11 @@ jobs:
 
           # [Optional]
           # Xray Watches. Learn more about them here: https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray+Watches
-          JF_WATCHES: "yoitsmikeho-watch"
+          JF_WATCHES: "hs"
 
           # [Optional]
           # JFrog project. Learn more about it here: https://www.jfrog.com/confluence/display/JFROG/Projects
-          JF_PROJECT: ${{ vars.JF_PROJECT }}
+          #JF_PROJECT: ${{ vars.JF_PROJECT }}
 
           # [Optional, default: "TRUE"]
           # Fails the Frogbot task if any security issue is found.
